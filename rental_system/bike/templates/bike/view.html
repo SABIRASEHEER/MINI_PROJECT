@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>bike</title>
+</head>
+<body><center>
+
+	<table border="2" cellpadding="2">
+
+			<h1>Two wheeler</h1>
+			<tr>
+				<th>name</th>
+				<th>price</th>
+				<th>conditions</th>
+				<th>model</th>
+			</tr>
+        {% for i in x %}
+			<tr>
+				<td>{{ i.name }}</td>
+				<td>{{ i.price }}</td>
+				<td>{{ i.conditions }}</td>
+				<td>{{ i.model }}</td>
+                <td><a href="{% url 'ff' idd=i.b_id %}" >update</a></td>
+                <td><a href="{% url 'fk' idd=i.b_id %}" >delete</a></td>
+
+			</tr>
+        {% endfor %}
+    </table>
+		</center>
+
+
+</body>
+</html>

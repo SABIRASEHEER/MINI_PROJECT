@@ -42,7 +42,7 @@ INSTALLED_APPS = [
     'login.apps.LoginConfig',
     'notification.apps.NotificationConfig',
     'payment.apps.PaymentConfig',
-    'request.apps.RequestConfig',
+    # 'request.apps.RequestConfig',
     'staff.apps.StaffConfig',
     'user.apps.UserConfig'
 ]
