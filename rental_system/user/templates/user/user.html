@@ -6,10 +6,11 @@
 <body>
 	<h1><center>Registration Form</center></h1>
 	<form method="post">
+        {% csrf_token %}
 	<table align="center">
 		<tr>
 			<td>Name:</td>
-		    <td><input type="text" name="uname"></td>
+		    <td><input type="text" name="un"></td>
 		</tr>
 		<tr>
 			<td>Address:</td>
@@ -29,8 +30,8 @@
 		</tr>
 		<tr>
 			<td>Gender:</td>
-			<td><input type="radio" name="male" >Male</td>
-			<td><input type="radio" name="female" >Female</td>
+			<td><input type="radio" name="gender" value="male">Male
+			<input type="radio" name="gender" value="female">Female</td>
 		</tr>
 		<tr>
 			<td>Email Id:</td>

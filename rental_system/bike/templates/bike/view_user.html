@@ -20,8 +20,8 @@
 				<td>{{ i.price }}</td>
 				<td>{{ i.conditions }}</td>
 				<td>{{ i.model }}</td>
-                <td><a href="{% url 'ff' idd=i.b_id %}" >update</a></td>
-                <td><a href="{% url 'fk' idd=i.b_id %}" >delete</a></td>
+                <td><a href="{% url 'fg' idd=i.b_id %}" >Rent</a></td>
+{#                <td><a href="{% url 'fk' idd=i.b_id %}" >delete</a></td>#}
 
 			</tr>
         {% endfor %}

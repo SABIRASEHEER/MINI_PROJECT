@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Request</title>
+</head>
+<body><center>
+    <form method="post" enctype="multipart/form-data">
+        {% csrf_token %}
+        <table>
+            <tr>
+                <td>Date</td>
+                <td><input type="date" name="date"></td>
+            </tr>
+            <tr>
+                <td>Time</td>
+                <td><input type="time" name="time"> </td>
+            </tr>
+            <tr>
+                <td>Document</td>
+                <td><input type="file" name="img"></td>
+            </tr>
+            <tr>
+                <td><input type="submit" value="Request"></td>
+            </tr>
+
+        </table>
+    </form>
+  </center>
+</body>
+</html>

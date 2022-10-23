@@ -24,7 +24,7 @@ urlpatterns = [
     url('login/', include('login.url')),
     url('notification/', include('notification.url')),
     url('payment/', include('payment.url')),
-    # url('request/', include('request.url')),
+    url('request/', include('request.url')),
     url('staff/', include('staff.url')),
     url('user/', include('user.url'))
 

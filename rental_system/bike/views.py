@@ -9,6 +9,7 @@ def post_bike(request):
         obj.model=request.POST.get('model')
         obj.price=request.POST.get('price')
         obj.conditions=request.POST.get('condition')
+        obj.availability=request.POST.get('availability')
         obj.status='pending'
         obj.save()
 
@@ -33,6 +34,7 @@ def update(request,idd):
         obj.model=request.POST.get('model')
         obj.price=request.POST.get('price')
         obj.conditions=request.POST.get('condition')
+        obj.availability=request.POST.get('availability')
         obj.save()
         return view_bike(request)
     return render(request, 'bike/update.html',context)
