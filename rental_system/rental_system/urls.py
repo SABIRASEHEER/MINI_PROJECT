@@ -26,6 +26,7 @@ urlpatterns = [
     url('payment/', include('payment.url')),
     url('request/', include('request.url')),
     url('staff/', include('staff.url')),
-    url('user/', include('user.url'))
+    url('user/', include('user.url')),
+    url('temp/', include('temp.url'))
 
 ]

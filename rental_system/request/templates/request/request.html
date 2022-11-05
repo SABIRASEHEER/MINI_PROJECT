@@ -8,6 +8,22 @@
     <form method="post" enctype="multipart/form-data">
         {% csrf_token %}
         <table>
+             <tr>
+                <td>Name</td>
+                <td><select name="ee">
+                    {% for i in u %}
+                        <option value="{{ i.u_id }}">{{ i.username }}</option>
+                    {% endfor %}
+                </select> </td>
+            </tr>
+            <tr>
+                <td>Bike Name</td>
+                <td><select name="ef">
+                    {% for i in v %}
+                        <option value="{{ i.b_id }}">{{ i.name }}</option>
+                    {% endfor %}
+                </select> </td>
+            </tr>
             <tr>
                 <td>Date</td>
                 <td><input type="date" name="date"></td>

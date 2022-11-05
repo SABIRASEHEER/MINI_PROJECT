@@ -17,14 +17,20 @@
 				<th>Document</th>
 				<th>Username</th>
                 <th>Bike Name</th>
+                <th>Status</th>
 			</tr>
+        {% for i in x %}
 			<tr>
-				<td></td>
-				<td></td>
-				<td></td>
-				<td></td>
-                <td></td>
+				<td>{{ i.date }}</td>
+				<td>{{ i.time }}</td>
+				<td>{{ i.document }}</td>
+				<td>{{ i.u_id }}</td>
+                <td>{{ i.b_id }}</td>
+                <td>{{ i.status }}</td>
+                <td><a href="{% url 'kk' idd=i.r_id %}" >Approve</a></td>
+                <td><a href="{% url 'mm' idd=i.r_id %}" >Reject</a></td>
 			</tr>
+        {% endfor %}
 		</center>
 	</table>
 

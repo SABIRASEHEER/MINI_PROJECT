@@ -6,17 +6,47 @@
 <body>
 	<h1><center>Payment</center></h1>
 	<form method="post">
+        {% csrf_token %}
 		<table align="center">
+
+            <tr>
+                <td>Name</td>
+                <td><select name="ee">
+                    {% for i in u %}
+                        <option value="{{ i.u_id }}">{{ i.username }}</option>
+                    {% endfor %}
+                </select> </td>
+            </tr>
+        <tr>
+                <td>Bike Name</td>
+                <td><select name="ef">
+                    {% for i in v %}
+                        <option value="{{ i.b_id }}">{{ i.name }}</option>
+                    {% endfor %}
+                </select> </td>
+            </tr>
+            <h3><center>Account Details</center></h3>
+            <tr>
+				<td>Account number:</td>
+				<td><input type="text" name="acno"></td>
+
+			</tr>
+            <tr>
+				<td>Credit card number:</td>
+				<td><input type="text" name="cdtno"></td>
+
+			</tr>
+            <tr>
+				<td>pin:</td>
+				<td><input type="text" name="pin"></td>
+
+			</tr>
 			<tr>
 				<td>Amount:</td>
 				<td><input type="text" name="amount"></td>
 
 			</tr>
-			<tr>
-				<td>Method:</td>
-				<td><input type="text" name="method"></td>
 
-			</tr>
 			<tr>
 				<td></td>
 				<td><input type="submit" name="btn" value="Payment"></td>

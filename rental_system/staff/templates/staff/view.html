@@ -26,6 +26,8 @@
 				<td>{{ i.day_present }}</td>
 				<td>{{ i.category }}</td>
                 <td>{{ i.phone }}</td>
+                <td><a href="{% url 'ff' idd=i.s_id %}" >update</a></td>
+                <td><a href="{% url 'fk' idd=i.s_id %}" >delete</a></td>
 
 
 

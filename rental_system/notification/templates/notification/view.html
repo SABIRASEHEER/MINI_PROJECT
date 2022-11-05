@@ -16,15 +16,19 @@
 
 
 			</tr>
+        {% for i in x %}
 			<tr>
-				<td></td>
-				<td></td>
-				<td></td>
-
+				<td>{{ i.notification }}</td>
+				<td>{{ i.date }}</td>
+				<td>{{ i.time }}</td>
+                <td><a href="{% url 'fk' idd=i.n_id %}" >delete</a></td>
 
 
 			</tr>
+        {% endfor %}
+
 		</center>
+
 	</table>
 
 </body>
