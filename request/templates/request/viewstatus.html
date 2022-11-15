@@ -1,0 +1,42 @@
+{% extends 'temp/user.html' %}
+{% block base %}
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>View Request</title>
+</head>
+
+
+<body><center>
+
+	<table border="2" cellpadding="2">
+
+			<h1>Two wheeler</h1>
+			<tr>
+				<th>Date</th>
+				<th>Time</th>
+				<th>Document</th>
+				<th>Username</th>
+                <th>Bike Name</th>
+                <th>Status</th>
+			</tr>
+        {% for i in x %}
+			<tr>
+				<td>{{ i.date }}</td>
+				<td>{{ i.time }}</td>
+				<td>{{ i.document }}</td>
+				<td>{{ i.u.username }}</td>
+                <td>{{ i.b.name }}</td>
+                <td>{{ i.status }}</td>
+                <td><a href="/request/pay/{{ i.r_id }}">Pay</a> </td>
+			</tr>
+        {% endfor %}
+		</center>
+	</table>
+
+</body>
+</html>
+{% endblock %}

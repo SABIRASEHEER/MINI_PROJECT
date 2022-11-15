@@ -1,0 +1,44 @@
+{% extends 'temp/admin.html' %}
+{% block base %}
+
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Staff</title>
+</head>
+<body><center>
+
+	<table border="2" cellpadding="2">
+
+			<h1>Staff</h1>
+			<tr>
+				<th>Name</th>
+				<th>Age</th>
+				<th>Salary/day</th>
+				<th>Day present</th>
+				<th>Catogory</th>
+                <th>Phone</th>
+
+
+			</tr>
+        {% for i in x %}
+			<tr>
+				<td>{{ i.staffname }}</td>
+				<td>{{ i.age }}</td>
+				<td>{{ i.salary_day }}</td>
+				<td>{{ i.day_present }}</td>
+				<td>{{ i.category }}</td>
+                <td>{{ i.phone }}</td>
+                <td><a href="{% url 'aa' idd=i.s_id %}" >update</a></td>
+                <td><a href="{% url 'fk' idd=i.s_id %}" >delete</a></td>
+
+
+
+			</tr>
+        {% endfor %}
+		</center>
+	</table>
+
+</body>
+</html>
+{% endblock %}
