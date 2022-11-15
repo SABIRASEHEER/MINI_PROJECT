@@ -1,0 +1,141 @@
+
+
+
+
+
+
+{% extends 'temp/user.html' %}
+{% block base %}
+
+<div class="col-md-4 mb-4">
+                    <div class="card border-0 mb-2">
+{#                        <img class="card-img-top" src="/static/img/b11.jpg/" width="130" height="130">#}
+                        <div class="card-body bg-white p-4">
+                            <div class="d-flex align-items-center mb-3">
+{#                                <a class="btn btn-primary" href=""><i class="fa fa-link"></i></a>#}
+                                <form method="post">
+                                    {% csrf_token %}
+                                    <input type="search" placeholder="Search..." name="search">
+                                    <input type="submit" value="search" class="btn-primary">
+                                </form>
+{#                                <h5 class="m-0 ml-3 text-truncate" style="font-size: larger">Keep Your Bike High</h5>#}
+                            </div>
+{#                            <h5 class="m-0 ml-3 text-truncate" style="font-size: larger">And Your Head Higher</h5>#}
+{#                            <p><i class="fa fa-rupee" >Conditions :</i>{{ i.conditions }}</p>#}
+{#                            <p><i class="fa fa-rupee" >Price :</i> {{ i.price }}</p>#}
+{#                            <p><i class="fa fa-shield" >Model :</i> {{ i.model }}</p>#}
+
+{#                            <p><small class="mr-3"><a href="/product/cate/{{i.p_id}}">WOMEN</a></small></p>#}
+{#                            <p> <small class="mr-3"><a href="/product/men/{{i.p_id}}">MEN</a></small></p>#}
+{#                            <p><small class="mr-3"><a href="/product/boy/{{i.p_id}}">BOYS</a></small></p>#}
+{#                            <td><a href="/request/post_request/{{ i.b_id }}" >Request</a></td>#}
+{#                            <td><a href="{% url 'fk' idd=i.b_id %}" >delete</a></td>#}
+                            <div class="d-flex">
+{#                                <small class="mr-3"><i class="fa-rupee-sign text-primary" ></i> {{ i.price }}</small>#}
+{#                                <small class="mr-3"> <div><td><a href="/product/order/{{ i.p_id }}"> ||ordernow</a></td></div></small>#}
+{#                                <small class="mr-3"><a href="/product/cate/{{i.p_id}}">WOMEN</a></small>#}
+{#                                <small class="mr-3"><a href="/product/men/{{i.p_id}}">MEN</a></small>#}
+{#                                <small class="mr-3"><td><a href="/product/boy/{{i.p_id}}">BOYS</a></td></small>#}
+{#                                <small class="mr-3"><td><a href="/product/girl/{{i.p_id}}">GIRLS</a></td></small>#}
+{#                                <div><td><a href="/product/order/{{ i.p_id }}"> ||ordernow</a></td></div>#}
+                            </div>
+                        </div>
+                    </div>
+                </div>
+    <div class="col-md-4 mb-4">
+{#                    <div class="card border-0 mb-2">#}
+{#                        <img class="card-img-top" src="/static/{{ i.image}}" width="300" height="200" alt="">#}
+{#                        <div class="card-body bg-white p-4">#}
+{#                            <div class="d-flex align-items-center mb-3">#}
+{#                                <a class="btn btn-primary" href=""><i class="fa fa-link"></i></a>#}
+{#                                <form method="post">#}
+{#                                    {% csrf_token %}#}
+{#                                    <input type="search" placeholder="Search..." name="search">#}
+{#                                    <input type="submit" value="search" class="btn-primary">#}
+{#                                </form>#}
+{#                                <h5 class="m-0 ml-3 text-truncate">{{ i.name }}</h5>#}
+{#                            </div>#}
+{#                            <p><i class="fa fa-rupee" >Conditions :</i>{{ i.conditions }}</p>#}
+{#                            <p><i class="fa fa-rupee" >Price :</i> {{ i.price }}</p>#}
+{#                            <p><i class="fa fa-shield" >Model :</i> {{ i.model }}</p>#}
+
+{#                            <p><small class="mr-3"><a href="/product/cate/{{i.p_id}}">WOMEN</a></small></p>#}
+{#                            <p> <small class="mr-3"><a href="/product/men/{{i.p_id}}">MEN</a></small></p>#}
+{#                            <p><small class="mr-3"><a href="/product/boy/{{i.p_id}}">BOYS</a></small></p>#}
+{#                            <td><a href="/request/post_request/{{ i.b_id }}" >Request</a></td>#}
+{#                            <td><a href="{% url 'fk' idd=i.b_id %}" >delete</a></td>#}
+                            <div class="d-flex">
+{#                                <small class="mr-3"><i class="fa-rupee-sign text-primary" ></i> {{ i.price }}</small>#}
+{#                                <small class="mr-3"> <div><td><a href="/product/order/{{ i.p_id }}"> ||ordernow</a></td></div></small>#}
+{#                                <small class="mr-3"><a href="/product/cate/{{i.p_id}}">WOMEN</a></small>#}
+{#                                <small class="mr-3"><a href="/product/men/{{i.p_id}}">MEN</a></small>#}
+{#                                <small class="mr-3"><td><a href="/product/boy/{{i.p_id}}">BOYS</a></td></small>#}
+{#                                <small class="mr-3"><td><a href="/product/girl/{{i.p_id}}">GIRLS</a></td></small>#}
+{#                                <div><td><a href="/product/order/{{ i.p_id }}"> ||ordernow</a></td></div>#}
+{#                            </div>#}
+{#                        </div>#}
+                    </div>
+                </div>
+    <div class="col-md-4 mb-4">
+{#                    <div class="card border-0 mb-2">#}
+{#                        <img class="card-img-top" src="/static/img/b67.jpg/" width="130" height="130" alt="">#}
+{#                        <div class="card-body bg-white p-4">#}
+{#                            <div class="d-flex align-items-center mb-3">#}
+{#                                <a class="btn btn-primary" href=""><i class="fa fa-link"></i></a>#}
+{#                                <h5 class="m-0 ml-3 text-truncate">Love Is When You Bike,</h5>#}
+{#                            </div>#}
+{#                             <h5 class="m-0 ml-3 text-truncate">Somone As Much As Your Bike </h5>#}
+{#                            <p>Somone As Much As Your Bike</p>#}
+{#                            <p><i class="fa fa-rupee" >Price :</i> {{ i.price }}</p>#}
+{#                            <p><i class="fa fa-shield" >Model :</i> {{ i.model }}</p>#}
+
+{#                            <p><small class="mr-3"><a href="/product/cate/{{i.p_id}}">WOMEN</a></small></p>#}
+{#                            <p> <small class="mr-3"><a href="/product/men/{{i.p_id}}">MEN</a></small></p>#}
+{#                            <p><small class="mr-3"><a href="/product/boy/{{i.p_id}}">BOYS</a></small></p>#}
+{#                            <td><a href="/request/post_request/{{ i.b_id }}" >Request</a></td>#}
+{#                            <td><a href="{% url 'fk' idd=i.b_id %}" >delete</a></td>#}
+                            <div class="d-flex">
+{#                                <small class="mr-3"><i class="fa-rupee-sign text-primary" ></i> {{ i.price }}</small>#}
+{#                                <small class="mr-3"> <div><td><a href="/product/order/{{ i.p_id }}"> ||ordernow</a></td></div></small>#}
+{#                                <small class="mr-3"><a href="/product/cate/{{i.p_id}}">WOMEN</a></small>#}
+{#                                <small class="mr-3"><a href="/product/men/{{i.p_id}}">MEN</a></small>#}
+{#                                <small class="mr-3"><td><a href="/product/boy/{{i.p_id}}">BOYS</a></td></small>#}
+{#                                <small class="mr-3"><td><a href="/product/girl/{{i.p_id}}">GIRLS</a></td></small>#}
+{#                                <div><td><a href="/product/order/{{ i.p_id }}"> ||ordernow</a></td></div>#}
+{#                            </div>#}
+{#                        </div>#}
+                    </div>
+                </div>
+{% for i in y %}
+ <div class="col-md-4 mb-4">
+                    <div class="card border-0 mb-2">
+                        <img class="card-img-top" src="/static/{{ i.image}}" width="300" height="200" alt="">
+                        <div class="card-body bg-white p-4">
+                            <div class="d-flex align-items-center mb-3">
+                                <a class="btn btn-primary" href=""><i class="fa fa-link"></i></a>
+                                <h5 class="m-0 ml-3 text-truncate">{{ i.name }}</h5>
+                            </div>
+                            <p><i class="fa fa-rupee" >Conditions :</i>{{ i.conditions }}</p>
+                            <p><i class="fa fa-rupee" >Price :</i> {{ i.price }}</p>
+                            <p><i class="fa fa-shield" >Model :</i> {{ i.model }}</p>
+
+{#                            <p><small class="mr-3"><a href="/product/cate/{{i.p_id}}">WOMEN</a></small></p>#}
+{#                            <p> <small class="mr-3"><a href="/product/men/{{i.p_id}}">MEN</a></small></p>#}
+{#                            <p><small class="mr-3"><a href="/product/boy/{{i.p_id}}">BOYS</a></small></p>#}
+                            <td><a href="/request/post_request/{{ i.b_id }}" >Request</a></td>
+{#                            <td><a href="{% url 'fk' idd=i.b_id %}" >delete</a></td>#}
+                            <div class="d-flex">
+{#                                <small class="mr-3"><i class="fa-rupee-sign text-primary" ></i> {{ i.price }}</small>#}
+{#                                <small class="mr-3"> <div><td><a href="/product/order/{{ i.p_id }}"> ||ordernow</a></td></div></small>#}
+{#                                <small class="mr-3"><a href="/product/cate/{{i.p_id}}">WOMEN</a></small>#}
+{#                                <small class="mr-3"><a href="/product/men/{{i.p_id}}">MEN</a></small>#}
+{#                                <small class="mr-3"><td><a href="/product/boy/{{i.p_id}}">BOYS</a></td></small>#}
+{#                                <small class="mr-3"><td><a href="/product/girl/{{i.p_id}}">GIRLS</a></td></small>#}
+{#                                <div><td><a href="/product/order/{{ i.p_id }}"> ||ordernow</a></td></div>#}
+                            </div>
+                        </div>
+                    </div>
+                </div>
+    </form>
+{% endfor %}
+{% endblock %}

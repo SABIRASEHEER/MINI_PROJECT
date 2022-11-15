@@ -1,0 +1,85 @@
+{#<!DOCTYPE html>#}
+{#<html>#}
+{#<head>#}
+{#	<title>bike</title>#}
+{#</head>#}
+{#<body><center>#}
+{##}
+{#	<table border="2" cellpadding="2">#}
+{##}
+{#			<h1>Two wheeler</h1>#}
+{#			<tr>#}
+{#				<th>Name</th>#}
+{#				<th>Price</th>#}
+{#				<th>Conditions</th>#}
+{#				<th>Model</th>#}
+{#			</tr>#}
+{#        {% for i in x %}#}
+{#			<tr>#}
+{#				<td>{{ i.name }}</td>#}
+{#				<td>{{ i.price }}</td>#}
+{#				<td>{{ i.conditions }}</td>#}
+{#				<td>{{ i.model }}</td>#}
+{#                <td><a href="{% url 'ff' idd=i.b_id %}" >update</a></td>#}
+{#                <td><a href="{% url 'fk' idd=i.b_id %}" >delete</a></td>#}
+{##}
+{#			</tr>#}
+{#        {% endfor %}#}
+{#    </table>#}
+{#		</center>#}
+{##}
+{##}
+{#</body>#}
+{#</html>#}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+{% extends 'temp/admin.html' %}
+{% block base %}
+
+
+{% for i in x %}
+ <div class="col-md-4 mb-4">
+                    <div class="card border-0 mb-2">
+                        <img class="card-img-top" src="/static/{{ i.image}}" width="300" height="200" alt="">
+                        <div class="card-body bg-white p-4">
+                            <div class="d-flex align-items-center mb-3">
+                                <a class="btn btn-primary" href=""><i class="fa fa-link"></i></a>
+                                <h5 class="m-0 ml-3 text-truncate">{{ i.name }}</h5>
+                            </div>
+                            <p><i class="fa fa-rupee" >Conditions :</i>{{ i.conditions }}</p>
+                            <p><i class="fa fa-rupee" >Price :</i> {{ i.price }}</p>
+                            <p><i class="fa fa-shield" >Model :</i> {{ i.model }}</p>
+
+{#                            <p><small class="mr-3"><a href="/product/cate/{{i.p_id}}">WOMEN</a></small></p>#}
+{#                            <p> <small class="mr-3"><a href="/product/men/{{i.p_id}}">MEN</a></small></p>#}
+{#                            <p><small class="mr-3"><a href="/product/boy/{{i.p_id}}">BOYS</a></small></p>#}
+{#                            <p><small class="mr-3"><td><a href="/product/girl/{{i.p_id}}">GIRLS</a></td></small></p>#}
+{#                             <div><a class="btn-primary" href="/product/order/{{ i.p_id }}">SHOP NOW</a></div>#}
+                            <div class="d-flex">
+{#                                <small class="mr-3"><i class="fa-rupee-sign text-primary" ></i> {{ i.price }}</small>#}
+{#                                <small class="mr-3"> <div><td><a href="/product/order/{{ i.p_id }}"> ||ordernow</a></td></div></small>#}
+{#                                <small class="mr-3"><a href="/product/cate/{{i.p_id}}">WOMEN</a></small>#}
+{#                                <small class="mr-3"><a href="/product/men/{{i.p_id}}">MEN</a></small>#}
+{#                                <small class="mr-3"><td><a href="/product/boy/{{i.p_id}}">BOYS</a></td></small>#}
+                                  <td><a href="{% url 'update' idd=i.b_id %}" >update</a></td>
+                                 <td><a href="{% url 'delete' idd=i.b_id %}">delete</a></td>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+    </form>
+{% endfor %}
+{% endblock %}
