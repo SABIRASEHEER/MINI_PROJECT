@@ -1,0 +1,38 @@
+{% extends 'temp/admin.html' %}
+{% block base %}
+
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Notification</title>
+</head>
+<body><center>
+
+	<table border="2" cellpadding="2">
+
+			<h1>Notification</h1>
+			<tr>
+				<th>Notification</th>
+				<th>Date</th>
+				<th>Time</th>
+
+
+
+			</tr>
+        {% for i in x %}
+			<tr>
+				<td>{{ i.notification }}</td>
+				<td>{{ i.date }}</td>
+				<td>{{ i.time }}</td>
+                <td><a href="{% url 'fk' idd=i.n_id %}" >delete</a></td>
+
+
+			</tr>
+        {% endfor %}
+
+	</table>
+</center>
+
+</body>
+</html>
+{% endblock %}

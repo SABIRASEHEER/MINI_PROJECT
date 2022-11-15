@@ -1,0 +1,39 @@
+{% extends 'temp/admin.html' %}
+{% block base %}
+
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Payment</title>
+</head>
+<body><center>
+
+	<table border="2" cellpadding="2">
+
+			<h1>Payment</h1>
+			<tr>
+                <th>Username:</th>
+                <th>Bike name:</th>
+				<th>Amount:</th>
+                <th>Date:</th>
+				<th>Time:</th>
+
+
+			</tr>
+        {% for i in x %}
+			<tr>
+                <td>{{ i.u_id }}</td>
+                <td>{{ i.b_id }}</td>
+				<td>{{ i.amount }}</td>
+				<td>{{ i.date }}</td>
+                <td>{{ i.time }}</td>
+
+
+			</tr>
+        {% endfor %}
+		</center>
+	</table>
+
+</body>
+</html>
+{% endblock %}

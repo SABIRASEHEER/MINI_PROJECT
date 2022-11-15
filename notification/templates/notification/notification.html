@@ -1,0 +1,27 @@
+{% extends 'temp/admin.html' %}
+{% block base %}
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Notification</title>
+</head>
+<body><center>
+	<h1>NOTIFICATION</h1>
+	<form method="post">
+        {% csrf_token %}
+		<table align="center">
+			<tr>
+				<td>Notification </td>
+				<td><textarea name="notification"  required=""></textarea></td>
+			</tr>
+			<tr>
+				<td></td>
+				<td><input type="submit" name="btn" value="ADD"></td>
+			</tr>
+		</table>
+	</form>
+</center>
+
+</body>
+</html>
+{% endblock %}
