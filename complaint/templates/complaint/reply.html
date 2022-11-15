@@ -1,0 +1,29 @@
+{% extends 'temp/admin.html'%}
+{% block base %}
+
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Response</title>
+</head>
+<body>
+	<h1><center>Reply</center></h1>
+	<form method="post">
+        {% csrf_token %}
+		<table align="center">
+			<tr>
+				<td>Reply:</td>
+				<td><textarea name="reply" required=""></textarea></td>
+			</tr>
+			<tr>
+				<td></td>
+				<td><input type="submit" name="btn" value="POST"></td>
+			</tr>
+
+		</table>
+	</form>
+
+</body>
+</html>
+
+{% endblock %}

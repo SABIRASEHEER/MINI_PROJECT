@@ -1,0 +1,38 @@
+{% extends 'temp/admin.html' %}
+{% block base %}
+
+
+
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Complaint</title>
+</head>
+<body><center>
+
+	<table border="2" cellpadding="2">
+
+			<h1>Complaint</h1>
+			<tr>
+				<th>Complaint</th>
+				<th>Date</th>
+				<th>time</th>
+
+
+			</tr>
+        {% for i in x %}
+			<tr>
+				<td>{{ i.complaint }}</td>
+				<td>{{ i.date }}</td>
+				<td>{{ i.time }}</td>
+                <td><a href="{% url 'ff' idd=i.c_id %}" >reply</a></td>
+			</tr>
+        {% endfor %}
+        </center>
+
+	</table>
+
+</body>
+</html>
+
+{% endblock %}

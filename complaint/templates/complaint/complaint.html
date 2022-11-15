@@ -1,0 +1,38 @@
+{% extends 'temp/user.html' %}
+{% block base %}
+
+
+
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Complaint</title>
+</head>
+<body>
+	<h1><center>Complaint</center></h1>
+	<form method="post">
+        {% csrf_token %}
+		<table align="center">
+{#            <tr>#}
+{#                <td>username</td>#}
+{#                <td><select name="ee">#}
+{#                    {% for i in u %}#}
+{#                        <option value="{{ i.u_id }}">{{ i.username }}</option>#}
+{#                    {% endfor %}#}
+{#                </select> </td>#}
+{#            </tr>#}
+			<tr>
+				<td>Complaint:</td>
+				<td><textarea name="complaint" required=""></textarea></td>
+			</tr>
+			<tr>
+				<td></td>
+				<td><input type="submit" name="btn" value="POST"></td>
+			</tr>
+		</table>
+	</form>
+
+</body>
+</html>
+
+{% endblock %}
