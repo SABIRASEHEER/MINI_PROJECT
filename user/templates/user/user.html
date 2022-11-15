@@ -1,0 +1,64 @@
+{% extends 'temp/home.html' %}
+{% block base %}
+
+
+
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Register</title>
+</head>
+<body><center>
+	<h1>REGISTRATION</h1>
+	<form method="post">
+        {% csrf_token %}
+	<table align="center">
+		<tr>
+			<td>Name:</td>
+		    <td><input type="text" name="un" required=""></td>
+		</tr>
+		<tr>
+			<td>Address:</td>
+			<td><textarea name="address" required=""></textarea></td>
+		</tr>
+		<tr>
+			<td>Aadhar Number:</td>
+			<td><input type="text" name="adhar" required=""></td>
+		</tr>
+		<tr>
+			<td>License Number:</td>
+			<td><input type="text" name="license" required=""></td>
+		</tr>
+		<tr>
+			<td>Pancard Number:</td>
+			<td><input type="text" name="pancard" required=""></td>
+		</tr>
+		<tr>
+			<td>Gender:</td>
+			<td><input type="radio" name="gender" value="male" checked >Male
+			<input type="radio" name="gender" value="female" >Female</td>
+		</tr>
+		<tr>
+			<td>Email Id:</td>
+			<td><input type="email" name="email" required="@"></td>
+		</tr>
+		<tr>
+			<td>Phone Number:</td>
+			<td><input type="Phone" name="phone" pattern="[0-9]{10}"></td>
+		</tr>
+        <tr>
+			<td>Password:</td>
+			<td><input type="Password" name="p" required=""></td>
+		</tr>
+		<tr>
+			<td></td>
+			<td><input type="submit" name="btn" value="Register"></td>
+		</tr>
+
+	</table>
+	</form>
+</center>
+
+</body>
+</html>
+{% endblock %}
